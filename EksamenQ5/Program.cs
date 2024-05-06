@@ -1,4 +1,4 @@
-﻿namespace Eksamen2024;
+﻿namespace EksamenQ5;
 
 class Program
 {
