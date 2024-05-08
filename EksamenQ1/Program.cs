@@ -24,7 +24,7 @@ class Program
         Console.WriteLine("Skriv inn en setning");
         string inputSentence = Console.ReadLine();
         int WordCount = inputSentence.Split(' ', StringSplitOptions.RemoveEmptyEntries).Length;
-        Console.WriteLine($"ord du hadde i setningen din er: {WordCount}");
+        Console.WriteLine($" ord i setningen: {inputSentence} er: {WordCount}");
         
         // oppgave c:
         
