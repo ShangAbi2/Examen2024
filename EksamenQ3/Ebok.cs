@@ -7,7 +7,7 @@ public class Ebok : Bok
     public Ebok(string isbn, string title, string author, int pageCount, double fileSize)
         : base(isbn, title, author, pageCount)
     {
-        FileSize = fileSize;
+        FileSize = fileSize; 
     }
 
     public override string GetInfo()
