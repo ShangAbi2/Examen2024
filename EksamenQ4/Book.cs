@@ -1,12 +1,17 @@
-namespace EksamenQ4;
+using Oppgave4;
 
-public class Bok : IFormatable
+namespace EksamenQ4;
+using CsvHelper.Configuration.Attributes;
+public class Book : IFormatable
 {
     private int _pageCount;
-
+    [Index(0)]
     public string ISBN { get; init; }
+    [Index(1)]
     public string Title { get; set; }
+    [Index(2)]
     public string Author { get; set; }
+    [Index(3)]
     public int PageNumber
     {
         get
@@ -15,7 +20,7 @@ public class Bok : IFormatable
         }
     }
 
-    public Bok(string isbn, string title, string author, int pageCount)
+    public Book(string isbn, string title, string author, int pageCount)
     {
         ISBN = isbn;
         Title = title;
@@ -31,5 +36,10 @@ public class Bok : IFormatable
     public string ToJSON()
     {
         return $"{{\"ISBN\":\"{ISBN}\",\"Title\":\"{Title}\",\"Author\":\"{Author}\",\"PageNumber\":{PageNumber}}}";
+    }
+    
+    public string GetCSVHeader()
+    {
+        return "ISBN,Title,Author,Page Number";
     }
 }

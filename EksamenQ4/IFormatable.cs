@@ -1,7 +1,8 @@
-namespace EksamenQ4;
-
+namespace Oppgave4;
+// Del A
 public interface IFormatable
 {
-    string ToCSV();
-    string ToJSON();
+    public string ToCSV();
+    public string ToJSON();
+    public string GetCSVHeader();
 }
