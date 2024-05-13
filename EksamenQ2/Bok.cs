@@ -24,7 +24,8 @@ public class Bok
         Author = author;
         _pageCount = pageCount;
     }
-
+    
+    // legger til antal sider om antall sider er mer enn 0. 
     public void IncreasePageCount(int numberOfPages)
     {
         if (numberOfPages > 0)
@@ -36,7 +37,7 @@ public class Bok
             Console.WriteLine(" Error: Antall sider er negativt");    
         }
     }
-
+    // trekker fra antall sider.
     public void DecreasePageCount(int numberOfPages)
     {
         if (numberOfPages > 0 && numberOfPages <= _pageCount)
